@@ -1,0 +1,17 @@
+<div class="c-bb-bingo-board">
+  <ol class="c-bb-bingo-board__board">
+    <li *ngFor="let blockGroup of blockGroups$ | async" class="c-bb-bingo-board__group-container">
+      <app-block-group [category]="blockGroup.category" [blocks]="blockGroup.blocks"></app-block-group>
+    </li>
+  </ol>
+
+  <div class="c-bb-bingo-board__action-container">
+    <button
+      class="c-bb-bingo-board__clear-button"
+      type="button"
+      (click)="onClearBoardClick()"
+    >
+      Clear Board
+    </button>
+  </div>
+</div>

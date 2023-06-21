@@ -1,0 +1,9 @@
+<button
+  *ngIf="blockId"
+  class="c-bb-block"
+  [ngClass]="{ 'c-bb-block--called': isCalled, 'c-bb-block--last-called': isLastCalled$ | async }"
+  type="button"
+  (click)="onBlockClick()"
+>
+  {{ blockId }}
+</button>

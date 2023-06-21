@@ -1,0 +1,9 @@
+<ol *ngIf="category" class="c-bb-block-group">
+  <li class="c-bb-block-group__category">
+    {{ category }}
+  </li>
+
+  <li *ngFor="let block of blocks" class="c-bb-block-group__block-container">
+    <app-block [blockId]="block.id" [isCalled]="block.isCalled"></app-block>
+  </li>
+</ol>
